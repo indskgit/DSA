@@ -1,0 +1,12 @@
+count Number Of Digits where decimal nUmber Is Given
+ //Best Way To Count
+    // example--> 10 in decimal is 1010 in binary and contains 4 digit.
+    formulae = (int) Math.log(n)/Math.log(base) +1;
+    n= number
+    base = either 2 for binary or 10 for Decimal
+
+    log a base b = x => a = b^x
+    example--> log 10 base 2 = 3.32
+    so--> 10 =(int) 2^3.32 +1
+    or
+    u can write log a base b = (int) (log a / log b)

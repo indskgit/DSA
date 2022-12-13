@@ -1,0 +1,19 @@
+******************* Mapping Of 2-D Array in Memory [as 1-D ]********************
+//how a 2D array stored in memory i.e {linear Array} Using Below Formulae U can check
+
+C * i + j
+where,
+C = number Of Column
+i = row at which u are
+j = col at which u are
+
+
+*****************Types Of Memory********************
+Method Area
+Native Area
+Pc Registers
+Stack
+Heap ---Young Gen, Old Gen, Permanent Gen.
+
+***************
+

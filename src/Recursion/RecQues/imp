@@ -1,0 +1,22 @@
+Time Complexity of nth fibonacci Using recursion = ((5^1/2)+1)/2)^n
+{root5+1 whole raise to the power n}
+
+Formulae{Basic} = fibo(n-1) + fibo(n-2);
+
+BestWay to Calculate is JumpSearch or Divide And Conquer Method Better than Binary Search
+Secret Formulae =
+
+****************************************
+Find Nth term of this series:
+Nth term = ( N * ( (N%2) + (N%3) ) )
+
+*****************************************
+Check For Number Fibonacci Or Not:
+check For perfect square
+*****************************************
+Question.-->Check if a M-th fibonacci number divides N-th fibonacci number.
+Ans--->1. A naive approach will be to find the N-th and M-th Fibonacci numbers and check if they are perfectly divisible or not.
+       2. An efficient approach is to use the Fibonacci property If m perfectly divides n,
+        then Fm also perfectly divides Fn, else it does not.
+
+*****************************************
