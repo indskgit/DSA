@@ -3,7 +3,7 @@ package Array_2D;
 import java.util.Arrays;
 
 public class WavePrint {
-    public static void wavePrint(int arr[][], int nRows, int mCols) {
+    public static void wavePrint(int[][] arr, int nRows, int mCols) {
         //  use return type int[] of method instead of void, if u want to run uncommented one
 //        int[] ans = new int[nRows * mCols];
 //        int k = 0;

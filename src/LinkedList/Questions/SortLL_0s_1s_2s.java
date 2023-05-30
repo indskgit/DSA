@@ -2,7 +2,7 @@ package LinkedList.Questions;
 
 public class SortLL_0s_1s_2s {
     Node head;
-    class Node{
+    static class Node{
         int data;
         Node next;
 
@@ -13,7 +13,7 @@ public class SortLL_0s_1s_2s {
     }
 
     private int SortedList(Node head) {
-        int countFreq[] = {0,0,0};
+        int[] countFreq = {0,0,0};
         Node Ptr = head;
         //counting the frequency of 0s,1s and 2s
         while (Ptr!= null){
