@@ -84,6 +84,11 @@ public class SinglyLL {
 
     }
 
+    void demo (int val){
+        Node sd = head;
+        System.out.println("Address "+sd);
+    }
+
     void display() {
         Node temp = head;
         System.out.print("Linked List are :");

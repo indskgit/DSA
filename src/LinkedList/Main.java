@@ -5,10 +5,11 @@ public class Main {
 
         SinglyLL sll = new SinglyLL();
 //        DoublyLL dll = new DoublyLL();
-//
-        sll.insertAtFirst(12);
+
+//        sll.insertAtFirst(12);
 //        sll.insertAtFirst(13);
 //        sll.insertAtFirst(19);
+
 
 //        sll.insertInBetween(34, 4);
 //        sll.insertInBetween(45, 2);
