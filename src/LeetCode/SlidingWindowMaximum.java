@@ -14,7 +14,7 @@ public class SlidingWindowMaximum {
      * You can only see the k numbers in the window. Each time the sliding window moves right by one position.
      */
 
-    public static int[] maxSlidingWindowBruteForce(int[] nums, int k) {
+    public static int[] maxSlidingWindowBruteForce(int[] nums, int k) {    //Might Give TLE For Bigger TestCases
         int n = nums.length;
         int[] ans = new int[n - k + 1];
 
@@ -34,12 +34,14 @@ public class SlidingWindowMaximum {
         return ans;
     }
 
-//    static int[] maxSlidingWindowOptimize(int[] nums, int k) {
-//
-//        Stack<Integer> st  = new Stack<>();
-//        int n = nums.length;
-//
-//    }
+    static int[] maxSlidingWindowOptimize(int[] nums, int k) {
+
+        int n = nums.length;
+        Stack<Integer> st  = new Stack<>();
+        int[] nge = new int[n-k+1];
+
+        return nge;
+    }
 
     public static void main(String[] args) {
         int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};
