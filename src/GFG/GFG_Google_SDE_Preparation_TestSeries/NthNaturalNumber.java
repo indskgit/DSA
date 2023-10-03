@@ -6,14 +6,14 @@ public class NthNaturalNumber {
         findNthApproach_2(8);
     }
 
-    static long findNthApproach_1(long N)
+    static void findNthApproach_1(long N)
     {
         String str = "";
         while(N!=0){
             str = (N % 9) + str;
             N = N / 9;
         }
-        return Long.parseLong(str);
+        System.out.println(Long.parseLong(str));
     }
 
     static long findNthApproach_2(long X)
