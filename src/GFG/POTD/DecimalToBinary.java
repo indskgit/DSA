@@ -1,4 +1,4 @@
-package GFG;
+package GFG.POTD;
 
 public class DecimalToBinary {
 

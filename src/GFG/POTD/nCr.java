@@ -1,15 +1,15 @@
-package GFG;
+package GFG.POTD;
 
 public class nCr {
 //    nCr = n! / r! *(n-r)!
     static int factN(int n){
         if(n == 0) return 1;
-        else return n * factN(n);
+        else return n * factN(n-1);
     }
 
     static int factR(int r){
         if(r == 0) return 1;
-        else return r * factN(r);
+        else return r * factN(r-1);
     }
 
     static int factorial(int n, int r){
@@ -19,8 +19,8 @@ public class nCr {
     }
 
     public static void main(String[] args) {
-        int n = 3;
-        int r = 2;
+        int n = 5;
+        int r = 4;
         System.out.println( factorial(n, r));
     }
 }

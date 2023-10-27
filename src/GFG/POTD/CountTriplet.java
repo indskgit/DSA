@@ -1,4 +1,4 @@
-package GFG;
+package GFG.POTD;
 /*
     Given an array arr[] of positive integers of size N,
     the task is to count number of triplets in the array such that

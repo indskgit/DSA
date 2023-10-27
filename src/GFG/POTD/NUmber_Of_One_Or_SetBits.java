@@ -1,4 +1,4 @@
-package GFG;
+package GFG.POTD;
 
 public class NUmber_Of_One_Or_SetBits {
     static int numberOfSetBits(int n){

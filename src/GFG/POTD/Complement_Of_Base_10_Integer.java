@@ -1,4 +1,4 @@
-package GFG;
+package GFG.POTD;
 
 import java.util.List;
 
