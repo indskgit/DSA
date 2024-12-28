@@ -18,7 +18,7 @@ public class Is_Binary_Number_Multiple_of_3 {
     }
 
     public static void main(String[] args) {
-       String S = "0011";
+        String S = "0011";
         System.out.println(isDivisible(S));
     }
 }

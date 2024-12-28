@@ -2,16 +2,15 @@ package TreeDSA;
 
 public class Recursive_Traversal {
 
-    static class Node{
-        int value;
-        Node right;
-        Node left;
+    static void preOrderTraversalRec(Node root) { // Rule:->Root left Right
 
-        public Node(int key){
-            this.value = key;
-        } //constructor
+        if (root == null) return;
+        System.out.print(root.value + " ");
+        preOrderTraversalRec(root.left);
+        preOrderTraversalRec(root.right);
+
     }
-    
+
 //    public static void createTree(){
 //
 //        Node root = new Node(9);
@@ -23,16 +22,7 @@ public class Recursive_Traversal {
 //        root.right.right = new Node(6);
 //    }
 
-    static void preOrderTraversalRec(Node root){ // Rule:->Root left Right
-
-        if (root == null) return;
-        System.out.print(root.value + " ");
-        preOrderTraversalRec(root.left);
-        preOrderTraversalRec(root.right);
-
-    }
-
-    static void inOrderTraversalRec(Node root){ // Rule:->left Root Right
+    static void inOrderTraversalRec(Node root) { // Rule:->left Root Right
         if (root == null)
             return;
         inOrderTraversalRec(root.left);
@@ -40,11 +30,11 @@ public class Recursive_Traversal {
         inOrderTraversalRec(root.right);
     }
 
-    static void postOrderTraversalRec(Node root){ //Rule:->left Right Root
+    static void postOrderTraversalRec(Node root) { //Rule:->left Right Root
         if (root == null) return;
         postOrderTraversalRec(root.left);
         postOrderTraversalRec(root.right);
-        System.out.print(root.value+ " ");
+        System.out.print(root.value + " ");
     }
 
     public static void main(String[] args) {
@@ -67,5 +57,15 @@ public class Recursive_Traversal {
         inOrderTraversalRec(root);
         System.out.println("\n");
         postOrderTraversalRec(root);
+    }
+
+    static class Node {
+        int value;
+        Node right;
+        Node left;
+
+        public Node(int key) {
+            this.value = key;
+        } //constructor
     }
 }

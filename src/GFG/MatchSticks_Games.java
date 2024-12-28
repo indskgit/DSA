@@ -50,9 +50,9 @@ In all possible scenarios, A can ensure that there is always a difference of 5 b
 I hope this clarifies how the logic works for N = 48.
      */
 
-    static int matchGames(Long n){
-        int res = (int)(n%5);
-        if(res == 0) return -1;
+    static int matchGames(Long n) {
+        int res = (int) (n % 5);
+        if (res == 0) return -1;
         else return res;
 
 //        return res == 0 ? -1: res;

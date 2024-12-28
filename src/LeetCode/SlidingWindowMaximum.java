@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class SlidingWindowMaximum {
     /**
-      SlidingWindow Concept
+     SlidingWindow Concept
      */
 
     /**
@@ -37,8 +37,8 @@ public class SlidingWindowMaximum {
     static int[] maxSlidingWindowOptimize(int[] nums, int k) {
 
         int n = nums.length;
-        Stack<Integer> st  = new Stack<>();
-        int[] nge = new int[n-k+1];
+        Stack<Integer> st = new Stack<>();
+        int[] nge = new int[n - k + 1];
 
         return nge;
     }

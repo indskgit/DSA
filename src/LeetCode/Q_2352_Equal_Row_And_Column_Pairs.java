@@ -15,21 +15,21 @@ public class Q_2352_Equal_Row_And_Column_Pairs {
     //M1-> Brute force
     public static int equalPairs(int[][] grid) {
         int count = 0;
-        for(int i =0;i<grid.length;i++)
-            for(int j=0;j<grid[0].length;j++)
-                if (checkIfEqual(i,j,grid)) count++;
+        for (int i = 0; i < grid.length; i++)
+            for (int j = 0; j < grid[0].length; j++)
+                if (checkIfEqual(i, j, grid)) count++;
         return count;
     }
 
-    public static boolean checkIfEqual(int m, int n,int[][] grid){
-        for(int i = 0;i<grid.length;i++)
-            if(grid[m][i]!=grid[i][n]) return false;
+    public static boolean checkIfEqual(int m, int n, int[][] grid) {
+        for (int i = 0; i < grid.length; i++)
+            if (grid[m][i] != grid[i][n]) return false;
         return true;
     }
 
 
     // M2-> Brute force
-    static int EqualPairsBrute(int[][] grid){
+    static int EqualPairsBrute(int[][] grid) {
         int count = -1;
         boolean isEqual = true;
         for (int j = 0; j < grid.length; j++) {
@@ -48,7 +48,7 @@ public class Q_2352_Equal_Row_And_Column_Pairs {
     }
 
     // M3-> Optimal Approach  HashMap O(n^2) space O(n)
-    static int equalPairsOptimal(int[][] grid){
+    static int equalPairsOptimal(int[][] grid) {
         HashMap<List<Integer>, Integer> map = new HashMap<>();
 
         // looping through rows
@@ -77,12 +77,13 @@ public class Q_2352_Equal_Row_And_Column_Pairs {
         }
         return count;
     }
+
     public static void main(String[] args) {
-        int [][] grid = {
-                {3,1,2,2},
-                {1,4,4,5},
-                {2,4,2,2},
-                {2,4,2,2}
+        int[][] grid = {
+                {3, 1, 2, 2},
+                {1, 4, 4, 5},
+                {2, 4, 2, 2},
+                {2, 4, 2, 2}
         };
         System.out.println(equalPairs(grid));
         System.out.println(EqualPairsBrute(grid));

@@ -1,21 +1,10 @@
 package GFG;
 
-import java.util.LinkedList;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Union_OF_Two_LinkedList {
     Node head;
-
-    static class Node {
-        int data;
-        Node next;
-
-        Node(int d) {
-            data = d;
-            next = null;
-        }
-    }
 
     public static Node findUnion(Node head1, Node head2) {
         Set<Integer> s = new TreeSet<>();
@@ -43,5 +32,15 @@ public class Union_OF_Two_LinkedList {
 
     public static void main(String[] args) {
 
+    }
+
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int d) {
+            data = d;
+            next = null;
+        }
     }
 }

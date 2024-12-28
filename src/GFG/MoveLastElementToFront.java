@@ -2,17 +2,8 @@ package GFG;
 
 public class MoveLastElementToFront {
     static Node head;
-    static class Node {
-        int data;
-        Node next;
-        Node(int d)
-        {
-            data = d;
-            next = null;
-        }
-    }
 
-    static void moveToFront(){
+    static void moveToFront() {
         if (head == null || head.next == null)
             return;
 
@@ -38,12 +29,13 @@ public class MoveLastElementToFront {
         head = last;
     }
 
-    static void push(int new_data){
+    static void push(int new_data) {
         Node new_node = new Node(new_data);
         new_node.next = head;
         head = new_node;
     }
-    static void printList(){
+
+    static void printList() {
         Node temp = head;
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -52,7 +44,7 @@ public class MoveLastElementToFront {
         System.out.println();
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         push(5);
         push(4);
@@ -69,5 +61,15 @@ public class MoveLastElementToFront {
         System.out.println(
                 "Linked List after moving last to front ");
         printList();
+    }
+
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int d) {
+            data = d;
+            next = null;
+        }
     }
 }

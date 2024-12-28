@@ -7,15 +7,16 @@ public class FiboUsingDynamicProgramming {
         System.out.println(fib(n));
 //        System.out.println(fibs(n));
     }
-    static int fiboUsingDP(int n){
-        int [] arr = new int[n+1];
+
+    static int fiboUsingDP(int n) {
+        int[] arr = new int[n + 1];
         int i;
 
-        arr[0] =0;
+        arr[0] = 0;
         arr[1] = 1;
 
-        for (i=2;i<=n;i++){
-            arr[i] = (arr[i-1] + arr[i-2]);
+        for (i = 2; i <= n; i++) {
+            arr[i] = (arr[i - 1] + arr[i - 2]);
         }
         return arr[n];
     }
@@ -23,10 +24,10 @@ public class FiboUsingDynamicProgramming {
     /*
     Space Optimized
     */
-    static int fib(int n){
-    int a = 0, b = 1, c;
-        if (n == 0)return a;
-        if (n == 1)return b;
+    static int fib(int n) {
+        int a = 0, b = 1, c;
+        if (n == 0) return a;
+        if (n == 1) return b;
         for (int i = 2; i <= n; i++) {
             c = a + b;
             a = b;

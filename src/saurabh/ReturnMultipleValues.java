@@ -1,25 +1,8 @@
 package saurabh;
 
-public class ReturnMultipleValues
-{
-    // a method that performs basic arithmetic
-// operations (+, - , *, /) on number a and b
-    public int[] performBasicArithOp(int a, int b)
-    {
-        int add = a + b;
-        int substract = a - b;
-        int multiply = a * b;
-        int divide = a / b;
-        int ans[] = new int[4];
-        ans[0] = add;
-        ans[1] = substract;
-        ans[2] = multiply;
-        ans[3] = divide;
-        return ans;
-    }
+public class ReturnMultipleValues {
     // main method
-    public static void main(String[] argvs)
-    {
+    public static void main(String[] argvs) {
 // creating an object of the class ReturnMultipleValues
         ReturnMultipleValues obj = new ReturnMultipleValues();
 // input 1
@@ -30,5 +13,20 @@ public class ReturnMultipleValues
         System.out.println("The difference of numbers " + n1 + " and " + n2 + " is: " + ans[1]);
         System.out.println("The multiplication of numbers " + n1 + " and " + n2 + " is: " + ans[2]);
         System.out.println("The division of numbers " + n1 + " and " + n2 + " is: " + ans[3]);
+    }
+
+    // a method that performs basic arithmetic
+// operations (+, - , *, /) on number a and b
+    public int[] performBasicArithOp(int a, int b) {
+        int add = a + b;
+        int substract = a - b;
+        int multiply = a * b;
+        int divide = a / b;
+        int ans[] = new int[4];
+        ans[0] = add;
+        ans[1] = substract;
+        ans[2] = multiply;
+        ans[3] = divide;
+        return ans;
     }
 }

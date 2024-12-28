@@ -6,19 +6,25 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Count_Distinct {
-    int count  = 1;
-    public void countDistinctElement(int[] arr){
+    int count = 1;
 
-        Set<Integer> hash = new HashSet<>();
-        /*for (int i = 0;i<arr.length;i++){
-            hash.add(arr[i]);
-        }*/
-        //either Use forEach loop both will be same
+    public static void main(String[] args) {
 
-        for (int dist:arr){
-            hash.add(dist);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter The Size Of Array");
+        int[] arr = new int[sc.nextInt()];
+        System.out.println("Enter Elements");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
         }
-        System.out.println("Distinct Elements Are : "+hash.size());
+        System.out.print("Your Elements are :");
+        System.out.println(Arrays.toString(arr));
+
+        //calling methods
+        Count_Distinct cde = new Count_Distinct();
+        cde.countDistinctElement(arr);
+
+//        System.out.println("Distinct Elements using naive way are : "+cde.bruteForce_naive(arr));
     }
 
 //    public int bruteForce_naive(int[] arr){
@@ -39,24 +45,18 @@ public class Count_Distinct {
 //        return count;
 //    }
 
+    public void countDistinctElement(int[] arr) {
 
-    public static void main(String[] args) {
+        Set<Integer> hash = new HashSet<>();
+        /*for (int i = 0;i<arr.length;i++){
+            hash.add(arr[i]);
+        }*/
+        //either Use forEach loop both will be same
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter The Size Of Array");
-        int[] arr = new int[sc.nextInt()];
-        System.out.println("Enter Elements");
-        for (int i = 0;i< arr.length;i++){
-            arr[i] = sc.nextInt();
+        for (int dist : arr) {
+            hash.add(dist);
         }
-        System.out.print("Your Elements are :");
-        System.out.println(Arrays.toString(arr));
-
-        //calling methods
-        Count_Distinct cde = new Count_Distinct();
-        cde.countDistinctElement(arr);
-
-//        System.out.println("Distinct Elements using naive way are : "+cde.bruteForce_naive(arr));
+        System.out.println("Distinct Elements Are : " + hash.size());
     }
 
 }

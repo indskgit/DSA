@@ -1,26 +1,23 @@
 package LeetCode;
+
 public class Q_143_ReorderLinkedList {
     static ListNode head;
-    static class ListNode {
-        ListNode next;
-        int val;
-        ListNode(int val) { this.val = val; }
-    }
 
-    static ListNode mid(ListNode head){
+    static ListNode mid(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
-        while(fast!=null && fast.next!=null){
+        while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
         }
         return slow;
     }
-    static ListNode rev(ListNode head){
+
+    static ListNode rev(ListNode head) {
         ListNode curr = head;
         ListNode prev = null;
         ListNode forward = null;
-        while(curr!= null){
+        while (curr != null) {
             forward = curr.next;
             curr.next = prev;
             prev = curr;
@@ -28,6 +25,7 @@ public class Q_143_ReorderLinkedList {
         }
         return prev;
     }
+
     static void reorderList(ListNode head) {
 
         ListNode mid = mid(head);
@@ -38,7 +36,7 @@ public class Q_143_ReorderLinkedList {
 
         ListNode temp;
 
-        while(p1!=null && p2!=null){
+        while (p1 != null && p2 != null) {
             temp = p1.next;
             p1.next = p2;
 
@@ -52,5 +50,14 @@ public class Q_143_ReorderLinkedList {
 
     public static void main(String[] args) {
 
+    }
+
+    static class ListNode {
+        ListNode next;
+        int val;
+
+        ListNode(int val) {
+            this.val = val;
+        }
     }
 }

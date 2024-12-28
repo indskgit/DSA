@@ -84,9 +84,9 @@ public class SinglyLL {
 
     }
 
-    void demo (int val){
+    void demo(int val) {
         Node sd = head;
-        System.out.println("Address "+sd);
+        System.out.println("Address " + sd);
     }
 
     void display() {

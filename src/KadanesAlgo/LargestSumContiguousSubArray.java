@@ -3,7 +3,7 @@ package KadanesAlgo;
 //t.c =O(n)
 public class LargestSumContiguousSubArray {
     public static void main(String[] args) {
-        int[] arr = {5,-4,-1,2,3};
+        int[] arr = {5, -4, -1, 2, 3};
         findLargestSum(arr);
     }
 
@@ -25,6 +25,6 @@ public class LargestSumContiguousSubArray {
                 startIdx = i + 1;//for finding the start index of sub Array
             }
         }
-        System.out.println("Max Sum is : " + maxSum +"\n"+ "StartIndex Is : "+startIdx +"\n"+"End Index Is : "+ endIdx);
+        System.out.println("Max Sum is : " + maxSum + "\n" + "StartIndex Is : " + startIdx + "\n" + "End Index Is : " + endIdx);
     }
 }

@@ -28,8 +28,8 @@ public class Q_16_3ClosetSum {
     }
 
     public static void main(String[] args) {
-        int[] nums = {-1,2,1,-4};
+        int[] nums = {-1, 2, 1, -4};
         int target = 1;
-        System.out.println(threeSumClosest(nums,target));
+        System.out.println(threeSumClosest(nums, target));
     }
 }

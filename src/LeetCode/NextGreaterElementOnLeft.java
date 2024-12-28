@@ -1,7 +1,5 @@
 package LeetCode;
 
-import java.util.Scanner;
-
 class GFG {
 
     // Naive function to count the number
@@ -22,7 +20,7 @@ class GFG {
 
     // Driver Code
     public static void main(String arg[]) {
-        int a[] = {40, 46, 33,39,28};
+        int a[] = {40, 46, 33, 39, 28};
         int n = a.length;
         System.out.print(countPairs(a, n));
     }

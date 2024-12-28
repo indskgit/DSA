@@ -3,13 +3,12 @@ package HackerRank;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class GameOfTwoStacks {
 
     //Brute force Method T.C = O(n+m);
-    static int gameOfTwoStacks(int maxSum, List<Integer>a, List<Integer>b){
-        int res ;
+    static int gameOfTwoStacks(int maxSum, List<Integer> a, List<Integer> b) {
+        int res;
         int c1 = 0; //count for List1
         int c2 = 0; //count for List2
         int sum = 0;
@@ -18,38 +17,38 @@ public class GameOfTwoStacks {
 //2nd. then, try removing elements from stack 1 or List 1 and add elements from stack 2 or List 2 if sum>maxSum
 
         for (Integer e1 : a) {
-            if(sum + e1 > maxSum) break;
-            sum+= e1;
+            if (sum + e1 > maxSum) break;
+            sum += e1;
             c1++;
         }
         res = c1; //storing the total count from List1 to res
 
-        for(Integer e2 : b){
-            sum+= e2;
+        for (Integer e2 : b) {
+            sum += e2;
             c2++;
-            while(sum>maxSum && c1>0){
-                sum-= a.get(c1-1);
+            while (sum > maxSum && c1 > 0) {
+                sum -= a.get(c1 - 1);
                 c1--;
             }
-            res =  (sum <= maxSum)? Math.max(c1+ c2, res) : res;
+            res = (sum <= maxSum) ? Math.max(c1 + c2, res) : res;
         }
         return res;
 
     }
 
 
-
     //2nd Method Using Stacks More Efficient
     public static int twoStacks(int maxSum, int[] a, int[] b) {
 
-        return twoStacks(maxSum,a,b,0,0)-1;
+        return twoStacks(maxSum, a, b, 0, 0) - 1;
     }
-    private static int twoStacks(int maxSum, int[] a, int[] b,int sum,int count) {
-        if (sum>maxSum) return count;
+
+    private static int twoStacks(int maxSum, int[] a, int[] b, int sum, int count) {
+        if (sum > maxSum) return count;
         if (a.length == 0 || b.length == 0) return count;
 
-        int ans1 = twoStacks(maxSum, Arrays.copyOfRange(a,1,a.length), b, sum+a[0], count+1);
-        int ans2 = twoStacks(maxSum, a, Arrays.copyOfRange(b,1,b.length), sum+a[0], count+1);
+        int ans1 = twoStacks(maxSum, Arrays.copyOfRange(a, 1, a.length), b, sum + a[0], count + 1);
+        int ans2 = twoStacks(maxSum, a, Arrays.copyOfRange(b, 1, b.length), sum + a[0], count + 1);
 
         return Math.max(ans1, ans2);
     }
@@ -97,7 +96,7 @@ public class GameOfTwoStacks {
         b.add(8);
         b.add(5);
 
-        System.out.println(gameOfTwoStacks(10,a,b));
-        System.out.println(gameOfTwoStacks(12,a,b));
+        System.out.println(gameOfTwoStacks(10, a, b));
+        System.out.println(gameOfTwoStacks(12, a, b));
     }
 }

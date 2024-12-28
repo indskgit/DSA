@@ -1,7 +1,7 @@
 package StriverSDESheetChallenge.Arrays;
 
 public class StockBuyAndSell {
-//Brute force T.C O(n^2)  might throw TLE For Bigger Inputs
+    //Brute force T.C O(n^2)  might throw TLE For Bigger Inputs
     public static int maxProfitBrute(int[] prices) {
         int maxPro = 0;
         for (int i = 0; i < prices.length; i++) {
@@ -14,7 +14,7 @@ public class StockBuyAndSell {
         return maxPro;
     }
 
-//    Optimal T.C = O(n)
+    //    Optimal T.C = O(n)
     public static int maxProfit(int[] prices) {
         int maxPro = 0;
         int minPrice = Integer.MAX_VALUE;

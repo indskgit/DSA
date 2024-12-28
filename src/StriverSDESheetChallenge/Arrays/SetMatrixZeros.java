@@ -6,21 +6,21 @@ import java.util.Arrays;
 public class SetMatrixZeros {
 
     //BruteForce T.C = O(n*m) + O(N+M) + O(n*M) i.e somewhere to O(N^3)
-    static int[][] setMatrixZeros(int[][] matrix){
+    static int[][] setMatrixZeros(int[][] matrix) {
         int row = matrix.length;
         int col = matrix[0].length;
-        for (int i = 0; i<row; i++){
-            for (int j = 0; j<col; j++){
-                if (matrix[i][j] == 0){
-                    markRow(matrix,row,col,i);
-                    markCol(matrix,row,col,j);
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (matrix[i][j] == 0) {
+                    markRow(matrix, row, col, i);
+                    markCol(matrix, row, col, j);
                 }
             }
         }
 
-        for(int i = 0; i<row; i++){
-            for(int j = 0; j<col; j++){
-                if (matrix[i][j] == -1){
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (matrix[i][j] == -1) {
                     matrix[i][j] = 0;
                 }
             }
@@ -29,21 +29,20 @@ public class SetMatrixZeros {
     }
 
     private static void markRow(int[][] matrix, int row, int col, int i) {
-        for(int j=0;j<col;j++){
-            if (matrix[i][j]!=0){
+        for (int j = 0; j < col; j++) {
+            if (matrix[i][j] != 0) {
                 matrix[i][j] = -1;
             }
         }
     }
 
     private static void markCol(int[][] matrix, int row, int col, int j) {
-        for(int i=0;i<row;i++){
-            if (matrix[i][j]!=0){
+        for (int i = 0; i < row; i++) {
+            if (matrix[i][j] != 0) {
                 matrix[i][j] = -1;
             }
         }
     }
-
 
 
     // Better Approach T.C = O(n^2)
@@ -132,7 +131,7 @@ public class SetMatrixZeros {
                 {7, 8, 0},
         };
 
-        System.out.println("Brute Force : "+Arrays.deepToString(setMatrixZeros(M)));
+        System.out.println("Brute Force : " + Arrays.deepToString(setMatrixZeros(M)));
 //        setMatrixZerosBetter(M);
 
 

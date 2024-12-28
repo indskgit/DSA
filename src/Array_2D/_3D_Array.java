@@ -1,13 +1,10 @@
 package Array_2D;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class _3D_Array {
     public static void main(String[] args) {
 
-        int[][][] arr = { { { 1, 2 }, { 3, 4 } },
-                { { 5, 6 }, { 7, 8 } } };
+        int[][][] arr = {{{1, 2}, {3, 4}},
+                {{5, 6}, {7, 8}}};
 
         for (int i = 0; i < 2; i++) {
 

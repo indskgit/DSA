@@ -8,15 +8,7 @@ import java.util.Queue;
 
 public class Binary_TreeOrderTraversal {
     private TreeNode root;
-    static class TreeNode{
-        TreeNode  left;
-        TreeNode right;
-        int val;
 
-        public TreeNode(int val){
-            this.val = val;
-        }
-    }
     public static List<List<Integer>> levelOrder(TreeNode root) {
 
         List<List<Integer>> ans = new ArrayList<>();
@@ -29,9 +21,9 @@ public class Binary_TreeOrderTraversal {
             List<Integer> ls = new ArrayList<>();
             int s = q.size();
 
-            for(int i = 0;i<s;i++){
+            for (int i = 0; i < s; i++) {
                 TreeNode node = q.remove();
-                if (node.left != null)  q.add(node.left);
+                if (node.left != null) q.add(node.left);
                 if (node.right != null) q.add(node.right);
                 ls.add(node.val);
             }
@@ -74,9 +66,9 @@ public class Binary_TreeOrderTraversal {
         while (!queue.isEmpty()) {
             int s = queue.size();
 
-            for(int i = 0;i<s;i++){
+            for (int i = 0; i < s; i++) {
                 TreeNode node = queue.remove();
-                if (node.left != null)  queue.add(node.left);
+                if (node.left != null) queue.add(node.left);
                 if (node.right != null) queue.add(node.right);
                 System.out.print(node.val + " ");
             }
@@ -93,6 +85,16 @@ public class Binary_TreeOrderTraversal {
         System.out.println(levelOrder(root));
         System.out.println(levelOrderApproach2(root));
         levelOrderVoid(root);
+    }
+
+    static class TreeNode {
+        TreeNode left;
+        TreeNode right;
+        int val;
+
+        public TreeNode(int val) {
+            this.val = val;
+        }
     }
 
 }

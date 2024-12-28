@@ -1,45 +1,8 @@
 package LinkedList.Questions;
+
 //Working On this not completed yet
 //Without Using extra Space
 public class OptimisedWayTFlattenLL {
-    private static class Node {
-        Node next, down;
-        int val;
-
-        public Node(int val) {
-            this.val = val;
-            next = down = null;
-        }
-
-    }
-
-    public void optimisedWay(Node head) {
-
-        if (head == null) return;
-
-
-        Node tail = head;
-        while (tail.next != null) {
-            tail = tail.next;
-        }
-        Node temp = null;
-
-        Node curr = head;
-        while (curr != tail) {
-            if (curr.down != null) {
-                tail.next = curr.down;
-                temp = curr.down;
-//curr.down=tail;
-                while (temp.next != null) {
-                    temp = temp.next;
-                }
-                tail = temp;
-            }
-            System.out.print(" " + curr.val + " ");
-            curr = curr.next;
-        }
-    }
-
     public static void main(String[] args) {
 
         Node one = new Node(1);
@@ -81,5 +44,43 @@ public class OptimisedWayTFlattenLL {
 
         OptimisedWayTFlattenLL op = new OptimisedWayTFlattenLL();
         op.optimisedWay(head);
+    }
+
+    public void optimisedWay(Node head) {
+
+        if (head == null) return;
+
+
+        Node tail = head;
+        while (tail.next != null) {
+            tail = tail.next;
+        }
+        Node temp = null;
+
+        Node curr = head;
+        while (curr != tail) {
+            if (curr.down != null) {
+                tail.next = curr.down;
+                temp = curr.down;
+//curr.down=tail;
+                while (temp.next != null) {
+                    temp = temp.next;
+                }
+                tail = temp;
+            }
+            System.out.print(" " + curr.val + " ");
+            curr = curr.next;
+        }
+    }
+
+    private static class Node {
+        Node next, down;
+        int val;
+
+        public Node(int val) {
+            this.val = val;
+            next = down = null;
+        }
+
     }
 }

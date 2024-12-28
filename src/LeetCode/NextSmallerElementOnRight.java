@@ -24,7 +24,7 @@ public class NextSmallerElementOnRight {
     }
 
     public static void main(String[] args) {
-        int [] nums = {3,5,2,6,1,8};
+        int[] nums = {3, 5, 2, 6, 1, 8};
         System.out.println(Arrays.toString(nextGreaterRightOptimal(nums)));
     }
 }

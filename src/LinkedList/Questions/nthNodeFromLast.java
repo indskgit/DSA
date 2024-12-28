@@ -82,10 +82,8 @@ public class nthNodeFromLast {
     }
 
 
-
     //method 2-->Recursive Approach  {T.C--> O(n) ,S.C-->O(n)}
-    public void printNthFromLast(int n)
-    {
+    public void printNthFromLast(int n) {
         int len = 0;
         Node temp = head;
 
@@ -108,7 +106,6 @@ public class nthNodeFromLast {
 
         System.out.println(temp.value);
     }
-
 
 
     //method 3--> Two Pointers -->{T.C--> O(n) ,S.C-->O(n)}  {uncomment below to know more}
@@ -140,8 +137,7 @@ public class nthNodeFromLast {
                     System.out.println("Node no. " + n
                             + " from last is "
                             + head.value);
-            }
-            else {
+            } else {
 
                 while (ref_ptr != null) {
                     main_ptr = main_ptr.next;
@@ -153,7 +149,6 @@ public class nthNodeFromLast {
             }
         }
     }
-
 
 
     public void display() {

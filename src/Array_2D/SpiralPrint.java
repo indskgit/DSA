@@ -1,21 +1,21 @@
 package Array_2D;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class SpiralPrint {
     public static void main(String[] args) {
         int[][] matrix = {
-                {1,2,3,4,5},
-                {6,7,8,9,0},
-                {11,12,13,14,15}
+                {1, 2, 3, 4, 5},
+                {6, 7, 8, 9, 0},
+                {11, 12, 13, 14, 15}
         };
         SpiralPrint sp = new SpiralPrint();
-        List<Integer> x  = sp.spiralOrder(matrix);
+        List<Integer> x = sp.spiralOrder(matrix);
         System.out.println(x);
     }
-    public  List<Integer> spiralOrder(int[][] matrix) {
+
+    public List<Integer> spiralOrder(int[][] matrix) {
 
         int rowLength = matrix.length;
         int colLength = matrix[0].length;

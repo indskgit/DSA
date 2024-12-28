@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public class Q_242_ValidAnagram {
 
-/*
-An Anagram is a word or phrase formed by rearranging the letters of a different word
-or phrase, typically using all the original letters exactly once.
-*/
+    /*
+    An Anagram is a word or phrase formed by rearranging the letters of a different word
+    or phrase, typically using all the original letters exactly once.
+    */
     public static boolean isAnagram(String s, String t) {  //T.C--> O(n * log n)
         char[] c = s.toCharArray();
         char[] c2 = t.toCharArray();
@@ -15,11 +15,12 @@ or phrase, typically using all the original letters exactly once.
         Arrays.sort(c2);
         int l1 = c.length;
         int l2 = c2.length;
-        if(l1!=l2)return false;
-        for(int i=0;i<l1;i++){
-            if(c[i] != c2[i])
+        if (l1 != l2) return false;
+        for (int i = 0; i < l1; i++) {
+            if (c[i] != c2[i])
                 return false;
-        } return true;
+        }
+        return true;
 
     }
 

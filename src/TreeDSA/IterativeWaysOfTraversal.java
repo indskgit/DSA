@@ -5,25 +5,15 @@ import java.util.Stack;
 
 public class IterativeWaysOfTraversal {  // Iterative Time Complexity: O(N) , Space Complexity: O(N)
 
-     static class Node{ int data;
-        private Node left;
-        private Node right;
-        Node(int data){
-            this.data = data;
-            left = null;
-            right = null;
-        }
-    }
-    static ArrayList<Integer> inOrderTraversal (Node cur){
-        ArrayList <Integer> inOrder = new ArrayList<>();
+    static ArrayList<Integer> inOrderTraversal(Node cur) {
+        ArrayList<Integer> inOrder = new ArrayList<>();
         Stack<Node> s = new Stack<>();
 
-        while (true){
-            if (cur!=null){
+        while (true) {
+            if (cur != null) {
                 s.push(cur);
                 cur = cur.left;
-            }
-            else{
+            } else {
                 if (s.isEmpty()) break;
                 cur = s.peek();
                 inOrder.add(cur.data);
@@ -50,42 +40,43 @@ public class IterativeWaysOfTraversal {  // Iterative Time Complexity: O(N) , Sp
         }
     }
 
-    static void preOrderTraversal (Node cur){
-         Stack<Node> st = new Stack<>();
-         if (cur == null) return;
-         st.push(cur);
-         while (!st.isEmpty()){
-             Node temp = st.pop();
-             System.out.print(temp.data +" ");
-             if (temp.right!=null){
-                 st.push(temp.right);
-             }if(temp.left!=null){
-                 st.push(temp.left);
-             }
-         }
+    static void preOrderTraversal(Node cur) {
+        Stack<Node> st = new Stack<>();
+        if (cur == null) return;
+        st.push(cur);
+        while (!st.isEmpty()) {
+            Node temp = st.pop();
+            System.out.print(temp.data + " ");
+            if (temp.right != null) {
+                st.push(temp.right);
+            }
+            if (temp.left != null) {
+                st.push(temp.left);
+            }
+        }
     }
 
-    static void postOrderTraversal(Node cur){
-         Node temp = cur;
-         Stack<Node> st = new Stack<>();
-         while (temp!=null || !st.isEmpty()){
-             if (temp!=null){
-                 st.push(temp);
-                 temp = temp.left;
-             }else{
-                 Node temp2 = st.peek().right;
-                 if (temp2 == null){
-                     temp2 = st.pop();
-                     System.out.print(temp2.data + " ");
-                     while (!st.isEmpty() && temp2 == st.peek().right){
-                         temp2 = st.pop();
-                         System.out.print(temp2.data + " ");
-                     }
-                 }else {
-                     temp = temp2;
-                 }
-             }
-         }
+    static void postOrderTraversal(Node cur) {
+        Node temp = cur;
+        Stack<Node> st = new Stack<>();
+        while (temp != null || !st.isEmpty()) {
+            if (temp != null) {
+                st.push(temp);
+                temp = temp.left;
+            } else {
+                Node temp2 = st.peek().right;
+                if (temp2 == null) {
+                    temp2 = st.pop();
+                    System.out.print(temp2.data + " ");
+                    while (!st.isEmpty() && temp2 == st.peek().right) {
+                        temp2 = st.pop();
+                        System.out.print(temp2.data + " ");
+                    }
+                } else {
+                    temp = temp2;
+                }
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -109,5 +100,17 @@ public class IterativeWaysOfTraversal {  // Iterative Time Complexity: O(N) , Sp
         System.out.println("\n");
         postOrderTraversal(root);
 
+    }
+
+    static class Node {
+        int data;
+        private Node left;
+        private Node right;
+
+        Node(int data) {
+            this.data = data;
+            left = null;
+            right = null;
+        }
     }
 }

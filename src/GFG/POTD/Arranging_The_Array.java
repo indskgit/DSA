@@ -42,11 +42,11 @@ public class Arranging_The_Array {
 
     }
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-            int[] arr = {-3, 3,-2,2};
-            int n = arr.length;
+        int[] arr = {-3, 3, -2, 2};
+        int n = arr.length;
 
-        Rearrange(arr,n);
-}
+        Rearrange(arr, n);
     }
+}

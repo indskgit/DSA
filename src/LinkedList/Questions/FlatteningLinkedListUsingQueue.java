@@ -1,68 +1,12 @@
 package LinkedList.Questions;
 
 import java.util.ArrayDeque;
-import java.util.Arrays;
 import java.util.Queue;
 
 //Space Comp--O(n) since we are using Queue
 //Time Comp--O(n)
 public class FlatteningLinkedListUsingQueue {
     Node head;
-    private static class Node{
-        Node next, down;
-        int val;
-
-        public Node( int val) {
-            this.val = val;
-        }
-
-        public Node(Node next, Node down, int val) {
-            this.next = next;
-            this.down = down;
-            this.val = val;
-        }
-    }
-
-    public void printMultiLevelLL(Node head){
-        if (head == null) return;
-        Node curr = head;
-        while (curr.next!=null) {
-            System.out.print(" "+curr.val+" ");
-            if (curr.down != null) {
-                System.out.print("[");
-                System.out.print(curr.down.val);
-                System.out.print("]");
-            }
-            curr = curr.next;
-        }
-    }
-    //Fn to convert MultilevelLL to SinglyLL
-    public Node convertMultiToFlatLL(Node head){
-
-        //creating queue using ArrayDeque Of type Node to store down Node
-        Queue<Node> q = new ArrayDeque<>();
-        Node curr = head;
-
-        while(curr!=null){
-
-            //if curr have down pointer
-            if (curr.down!=null){
-                //add it to queue
-                q.add(curr.down);
-            }
-
-            if (curr.next== null){
-                //At point where curr.Next point to null we pull a Node
-                // Which is already being Store as down Pointer if it exists
-                // and add it to curr.next
-                curr.next=q.poll();
-            }
-            System.out.print(curr.val+"->");
-            curr = curr.next;
-        }
-        System.out.print("Null");
-        return head;
-    }
 
     public static void main(String[] args) {
 
@@ -111,5 +55,62 @@ public class FlatteningLinkedListUsingQueue {
         System.out.println("After flattening");
         flsl.convertMultiToFlatLL(head);
 
+    }
+
+    public void printMultiLevelLL(Node head) {
+        if (head == null) return;
+        Node curr = head;
+        while (curr.next != null) {
+            System.out.print(" " + curr.val + " ");
+            if (curr.down != null) {
+                System.out.print("[");
+                System.out.print(curr.down.val);
+                System.out.print("]");
+            }
+            curr = curr.next;
+        }
+    }
+
+    //Fn to convert MultilevelLL to SinglyLL
+    public Node convertMultiToFlatLL(Node head) {
+
+        //creating queue using ArrayDeque Of type Node to store down Node
+        Queue<Node> q = new ArrayDeque<>();
+        Node curr = head;
+
+        while (curr != null) {
+
+            //if curr have down pointer
+            if (curr.down != null) {
+                //add it to queue
+                q.add(curr.down);
+            }
+
+            if (curr.next == null) {
+                //At point where curr.Next point to null we pull a Node
+                // Which is already being Store as down Pointer if it exists
+                // and add it to curr.next
+                curr.next = q.poll();
+            }
+            System.out.print(curr.val + "->");
+            curr = curr.next;
+        }
+        System.out.print("Null");
+        return head;
+    }
+
+    private static class Node {
+        Node next, down;
+        int val;
+
+        public Node(int val) {
+            this.val = val;
+        }
+
+        public Node(Node next, Node down, int val) {
+            this.next = next;
+            this.down = down;
+            this.val = val;
+        }
     }
 }

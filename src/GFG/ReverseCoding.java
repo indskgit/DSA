@@ -7,15 +7,15 @@ public class ReverseCoding {
 */
 
     static int sumOfNaturals(int n) {
-        return (n*(n+1))/2 % 1000000007;
+        return (n * (n + 1)) / 2 % 1000000007;
     }
 
     static int sumOfNatural(int n) {
-        int sum =0;
-        for(int i=1;i<=n;i++){
-            sum+= i;
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
         }
-        return sum%1000000007;
+        return sum % 1000000007;
     }
 
     public static void main(String[] args) {

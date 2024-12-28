@@ -11,10 +11,10 @@ public class MajorityElement {
     that appears more than N/2 times in the array.
     */
     public static void main(String[] args) {
-        int[] arr = {3,2,2,2,2,1,1};
+        int[] arr = {3, 2, 2, 2, 2, 1, 1};
         int size = arr.length;
-        System.out.println(frequencyOfElements(arr,size));
-        System.out.println(freqOfElements(arr,size));
+        System.out.println(frequencyOfElements(arr, size));
+        System.out.println(freqOfElements(arr, size));
     }
 
     static int frequencyOfElements(int[] a, int size) {
@@ -38,22 +38,22 @@ public class MajorityElement {
             }
 
         }
-        System.out.println("Element "+element+" is repeated "+majority +" times which is greater than n/2");
+        System.out.println("Element " + element + " is repeated " + majority + " times which is greater than n/2");
         return element;
     }
 
-    static int freqOfElements(int[] a, int size){
+    static int freqOfElements(int[] a, int size) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int ans = 0;
         for (int i = 0; i < size; i++) {
-            if (map.containsKey(a[i])){
-                map.put(a[i],map.get(a[i])+1 );
-            }else map.put(a[i], 1);
+            if (map.containsKey(a[i])) {
+                map.put(a[i], map.get(a[i]) + 1);
+            } else map.put(a[i], 1);
         }
-        for (int key : map.keySet()){
-            if (map.get(key)>size/3){
+        for (int key : map.keySet()) {
+            if (map.get(key) > size / 3) {
                 ans = key;
-                System.out.println("Element " + key +" is repeated "+map.get(key)+" times which is greater than size/3");
+                System.out.println("Element " + key + " is repeated " + map.get(key) + " times which is greater than size/3");
             }
         }
         return ans;

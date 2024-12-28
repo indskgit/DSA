@@ -28,15 +28,15 @@ If K >= M, the Mth element of the array after K right rotations is
 */
 public class MthElementAfterKRightRotationInArray {
     public static void main(String[] args) {
-        int a[] = { 1, 2, 3, 4, 5 };//34512
+        int a[] = {1, 2, 3, 4, 5};//34512
         int k = 3, m = 2;
-        int n = a.length/a[0];
+        int n = a.length / a[0];
         System.out.println(n);
-        System.out.println(getFirstElement(a,n,k,m));
+        System.out.println(getFirstElement(a, n, k, m));
     }
+
     static int getFirstElement(int a[], int N,
-                        int K, int M)
-    {
+                               int K, int M) {
         //K =times of rotation
         //N = total length of array
         //M =

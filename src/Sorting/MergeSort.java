@@ -58,7 +58,6 @@ public class MergeSort {
     }
 
 
-
     static void mergeSortInPlace(int[] arr, int s, int e) {
         if (e - s == 1) {
             return;
@@ -105,7 +104,7 @@ public class MergeSort {
         }
 
         for (int l = 0; l < mix.length; l++) {
-            arr[s+l] = mix[l];
+            arr[s + l] = mix[l];
         }
     }
 }

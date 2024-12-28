@@ -50,10 +50,11 @@ public class Geek_And_The_Colorful_Candies {
         }
         return ans;
     }
+
     public static void main(String[] args) {
         int N = 5;
         int K = 4;
-        int[] color = { 1, 2, 1, 2, 3, 3, 1 };
-        System.out.println(colorfulCandies(N, K, color) );
+        int[] color = {1, 2, 1, 2, 3, 3, 1};
+        System.out.println(colorfulCandies(N, K, color));
     }
 }

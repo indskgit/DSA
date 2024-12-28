@@ -11,6 +11,19 @@ public class Q_232_ImplimentQueUsingStacks {
         second = new Stack<Integer>();
     }
 
+    public static void main(String[] args) {
+
+        Q_232_ImplimentQueUsingStacks st = new Q_232_ImplimentQueUsingStacks();
+
+        st.push(3);
+        st.push(3);
+        st.push(4);
+
+        System.out.println("Pop " + st.pop());
+        System.out.println("Peek " + st.peek());
+        System.out.println("isEmpty " + st.empty());
+    }
+
     public void push(int x) {
         first.push(x);
     }
@@ -42,18 +55,5 @@ public class Q_232_ImplimentQueUsingStacks {
     public boolean empty() {
         return first.isEmpty();
 
-    }
-
-    public static void main(String[] args) {
-
-        Q_232_ImplimentQueUsingStacks st = new Q_232_ImplimentQueUsingStacks();
-
-        st.push(3);
-        st.push(3);
-        st.push(4);
-
-        System.out.println("Pop " + st.pop());
-        System.out.println("Peek " + st.peek());
-        System.out.println("isEmpty " + st.empty());
     }
 }

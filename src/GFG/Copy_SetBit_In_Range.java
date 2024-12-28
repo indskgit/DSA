@@ -7,17 +7,17 @@ public class Copy_SetBit_In_Range {
         int j = 0;
         str[index++] = Integer.toBinaryString(x);
         str[index] = Integer.toBinaryString(y);
-        String s = str[j] + str[j+1];
+        String s = str[j] + str[j + 1];
 
         int bin = Integer.parseInt(s);
         int i = 0;
         int ans = 0;
-        while (bin!=0){
-            int bit = bin%10;
-            if (bit == 1){
-                ans+=Math.pow(2,i);
+        while (bin != 0) {
+            int bit = bin % 10;
+            if (bit == 1) {
+                ans += Math.pow(2, i);
             }
-            bin/=10;
+            bin /= 10;
             i++;
         }
         return ans;
@@ -51,15 +51,16 @@ public class Copy_SetBit_In_Range {
 //
 //    }
 
-    static int setSetBit(int x, int y, int l, int r){
+    static int setSetBit(int x, int y, int l, int r) {
 
-        for(int i=l;i<=r;i++){
-            int res = 1<<i-1;
-            int ans = y&(res);
-            x=x|ans;
+        for (int i = l; i <= r; i++) {
+            int res = 1 << i - 1;
+            int ans = y & (res);
+            x = x | ans;
         }
         return x;
     }
+
     public static void main(String[] args) {
         int x = 44;
         int y = 3;
@@ -67,7 +68,7 @@ public class Copy_SetBit_In_Range {
         int r = 5;
 
 //        System.out.println(copySetBit(x,y));
-        System.out.println(setSetBit(x,y,l,r));
+        System.out.println(setSetBit(x, y, l, r));
 
 
     }

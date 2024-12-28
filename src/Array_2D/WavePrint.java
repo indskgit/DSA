@@ -1,7 +1,5 @@
 package Array_2D;
 
-import java.util.Arrays;
-
 public class WavePrint {
     public static void wavePrint(int[][] arr, int nRows, int mCols) {
         //  use return type int[] of method instead of void, if u want to run uncommented one
@@ -9,9 +7,9 @@ public class WavePrint {
 //        int k = 0;
 
         System.out.println("The Original Array is : ");
-        for (int row = 0; row< nRows; row++){
-            for (int col = 0; col<mCols; col++){
-                System.out.print(arr[row][col]+" ");
+        for (int row = 0; row < nRows; row++) {
+            for (int col = 0; col < mCols; col++) {
+                System.out.print(arr[row][col] + " ");
             }
         }
 
@@ -38,11 +36,11 @@ public class WavePrint {
 
     public static void main(String[] args) {
         int arr[][] = {
-                {1,2,3,4},
-                {5,6,7,8}
+                {1, 2, 3, 4},
+                {5, 6, 7, 8}
         };
 
-        wavePrint(arr,2,4);
+        wavePrint(arr, 2, 4);
 
 //        System.out.print(Arrays.toString(wavePrint(arr,2,4) ) + " ");
     }

@@ -6,12 +6,12 @@ public class BinaryToDecimal {
         int digit;
         int ans = 0;
 
-        while(n!=0) {
+        while (n != 0) {
             digit = n % 10;
-            if(digit == 1){
-                ans+= Math.pow(2, i);
+            if (digit == 1) {
+                ans += Math.pow(2, i);
             }
-            n/=10;
+            n /= 10;
             i++;
         }
         return ans;

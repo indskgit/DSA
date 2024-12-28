@@ -26,10 +26,10 @@ public class orgonMethodBS {
                 int mid = start + (end - start) / 2;
                 if (target > arr[mid]) {
 //                    mid = start + 1;
-                    start = mid+1;
+                    start = mid + 1;
                 } else if (target < arr[mid]) {
 //                    mid = end - 1;
-                    end = mid-1;
+                    end = mid - 1;
                 } else
                     return mid;
             }
@@ -39,10 +39,10 @@ public class orgonMethodBS {
                 int mid = start + (end - start) / 2;
                 if (target > arr[mid]) {
 //                    mid = end - 1;
-                    start = mid+1;
+                    start = mid + 1;
                 } else if (target < arr[mid]) {
 //                    mid = start + 1;
-                    end = mid -1;
+                    end = mid - 1;
                 } else
                     return mid;
             }
