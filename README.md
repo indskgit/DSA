@@ -43,4 +43,4 @@ To run the project, open it in IntelliJ IDEA and execute the desired class or me
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE]([LICENSE](https://github.com/indskgit/DSA/blob/master/LICENSE)) file for more details.
+This project is licensed under the MIT License. See the https://github.com/indskgit/DSA/blob/master/LICENSE file for more details.
